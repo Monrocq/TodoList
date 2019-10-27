@@ -10,6 +10,7 @@ body {
 
 .slide-image {
     width: 100%;
+    margin-top: 15px;
 }
 
 .carousel-holder {
@@ -51,4 +52,8 @@ body {
 
 footer {
     margin: 50px 0;
+}
+
+.mt-4 {
+    margin-top: 15px;
 }
