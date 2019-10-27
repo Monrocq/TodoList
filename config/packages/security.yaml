@@ -1,11 +1,13 @@
 security:
     encoders:
-        App\Entity\User: bcrypt
+        App\Entity\User:
+          algorithm: auto
+          cost: 12
 
     providers:
         doctrine:
             entity:
-                class: App\User
+                class: App\Entity\User
                 property: username
 
     firewalls:

@@ -28,7 +28,7 @@ class User implements UserInterface, \Serializable
     private $username;
 
     /**
-     * @ORM\Column(type="string", length=64)
+     * @ORM\Column(type="string", length=255)
      */
     private $password;
 
@@ -86,6 +86,7 @@ class User implements UserInterface, \Serializable
 
     public function eraseCredentials()
     {
+        return null;
     }
 
     public function serialize()
