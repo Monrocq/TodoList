@@ -101,7 +101,7 @@ class User implements UserInterface, \Serializable
     {
         //return array('ROLE_USER');
         if ($this->role == 1) {
-            return array('ROLE_ADMIN');
+            return array('ROLE_ADMIN', 'ROLE_USER');
         } else {
             return array('ROLE_USER');
         }

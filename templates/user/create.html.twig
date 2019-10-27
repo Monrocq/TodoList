@@ -6,9 +6,11 @@
 {% block body %}
     <div class="row">
         {{ form_start(form, {'action' : path('user_create')}) }}
-            {{ form_widget(form) }}
+            {{ form_row(form.username) }}
+            {{ form_row(form.password) }}
+            {{ form_row(form.email) }}
 
             <button type="submit" class="btn btn-success pull-right">Ajouter</button>
-        {{ form_end(form) }}
+        {{ form_end(form, {'render_rest': false}) }}
     </div>
 {% endblock %}
