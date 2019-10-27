@@ -15,7 +15,15 @@ class TaskController extends AbstractController
      */
     public function listAction()
     {
-        return $this->render('task/list.html.twig', ['tasks' => $this->getDoctrine()->getRepository('App:Task')->findAll()]);
+        return $this->render('task/list.html.twig', ['tasks' => $this->getDoctrine()->getRepository('App:Task')->findBy(['isDone' => 0])]);
+    }
+
+    /**
+     * @Route("/tasks-finished", name="task_finished")
+     */
+    public function listActionFinished()
+    {
+        return $this->render('task/finished.html.twig', ['tasks' => $this->getDoctrine()->getRepository('App:Task')->findBy(['isDone' => 1])]);
     }
 
     /**
@@ -30,6 +38,8 @@ class TaskController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
+            $task->setAuthor($this->getUser());
 
             $em->persist($task);
             $em->flush();
@@ -51,7 +61,7 @@ class TaskController extends AbstractController
 
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
             $this->addFlash('success', 'La tâche a bien été modifiée.');
