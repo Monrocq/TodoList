@@ -31,6 +31,9 @@
                 </div>
             </div>
         </div>
+            <div class="d-none" id="task{{ task.title }}" style="display: none">
+                <p>{{ task.id }}</p>
+            </div>
         {% else %}
             <div class="alert alert-warning" role="alert">
                 Il n'y a pas encore de tâche enregistrée.
