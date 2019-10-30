@@ -127,7 +127,7 @@ class TaskControllerTest extends WebTestCase
 
         $id = $crawler->filter("#taskTest p")->text();
 
-        $crawler = $client->request('DELETE', '/tasks/' . $id . '/delete');
+        $crawler = $client->request('GET', '/tasks/' . $id . '/delete');
 
         $crawler = $client->followRedirect();
 
