@@ -4,9 +4,9 @@ namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class Connexion extends WebTestCase
+class ConnexionController extends WebTestCase
 {
-    static function connexion()
+    protected function connexion()
     {
         $client = static::createClient();
         $crawler = $client->request('GET', '/login');

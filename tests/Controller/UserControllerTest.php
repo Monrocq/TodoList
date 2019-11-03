@@ -4,12 +4,12 @@ namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class UserControllerTest extends WebTestCase
+class UserControllerTest extends ConnexionController
 {
     
     public function testListAction()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -21,7 +21,7 @@ class UserControllerTest extends WebTestCase
 
     public function testCreatePage()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -33,7 +33,7 @@ class UserControllerTest extends WebTestCase
 
     public function testCreateUser()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -63,7 +63,7 @@ class UserControllerTest extends WebTestCase
 
     public function testEditUser()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
