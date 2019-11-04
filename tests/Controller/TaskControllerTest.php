@@ -5,11 +5,11 @@ namespace App\Tests\Controller;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Request;
 
-class TaskControllerTest extends WebTestCase
+class TaskControllerTest extends ConnexionController
 {
     public function testListAction()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -20,7 +20,7 @@ class TaskControllerTest extends WebTestCase
 
     public function testListActionFinished()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -34,7 +34,7 @@ class TaskControllerTest extends WebTestCase
 
     public function testCreatePage()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -46,7 +46,7 @@ class TaskControllerTest extends WebTestCase
     
     public function testCreateTask()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -65,7 +65,7 @@ class TaskControllerTest extends WebTestCase
 
     public function testEditPage()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -80,7 +80,7 @@ class TaskControllerTest extends WebTestCase
 
     public function testEditTask()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -101,7 +101,7 @@ class TaskControllerTest extends WebTestCase
 
     public function testToggleTask()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 
@@ -119,7 +119,7 @@ class TaskControllerTest extends WebTestCase
 
     public function testDeleteTask()
     {
-        $array = Connexion::connexion();
+        $array = $this->connexion();
         $client = $array['client'];
         $crawler = $array['crawler'];
 

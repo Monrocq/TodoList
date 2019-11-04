@@ -32,9 +32,11 @@
 
             <img src="{{ asset('img/Logo_OpenClassrooms.png') }}" alt="OpenClassrooms" />
         </div>
+        {% if is_granted('ROLE_ADMIN') %}
         <div class="nav navbar-nav navbar-right">
             <a href="{{ path('user_list') }}" class="pull-right btn btn-primary mt-2">Utilisateurs</a>
         </div>
+        {% endif %}
     </div>
 </nav>
 
