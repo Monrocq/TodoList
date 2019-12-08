@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
+use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,9 +15,23 @@ class TaskController extends AbstractController
     /**
      * @Route("/tasks", name="task_list")
      */
-    public function listAction()
+    public function listAction(EntityManagerInterface $em, PaginatorInterface $paginator, Request $request)
     {
-        return $this->render('task/list.html.twig', ['tasks' => $this->getDoctrine()->getRepository('App:Task')->findBy(['isDone' => 0], ['createdAt' => 'DESC'])]);
+        //return $this->render('task/list.html.twig', ['tasks' => $this->getDoctrine()->getRepository('App:Task')->findBy(['isDone' => 0], ['createdAt' => 'DESC'])]);
+
+        //$dql   = "SELECT id, created_at, title, content, is_done, author_id FROM task WHERE is_done = 0 ORDER BY created_at DESC";
+        //$query = $em->createQuery($dql);
+
+
+        $pagination = $paginator->paginate(
+            $this->getDoctrine()->getRepository('App:Task')->findBy(['isDone' => 0]),
+            $request->query->getInt('page', 1),
+            10
+        );
+
+        // parameters to template
+        return $this->render('task/list.html.twig', ['tasks' => $pagination, 'pagination' => $pagination]);
+        
     }
 
     /**

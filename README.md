@@ -29,6 +29,8 @@ Effectué avec [Blackfire](https://blackfire.io/profiles/compare/bc872025-2597-4
   php bin/console doctrine:database:create
   //Install Architecture
   php bin/console doctrine:schema:create
+  //Load Fixtures for tests
+  php bin/console doctrine:fixtures:load
   ```
 3. You can navigate on the project with [XAMPP](https://www.apachefriends.org/fr/index.html)||[LAMP](https://doc.ubuntu-fr.org/lamp)||[MAMP](https://www.mamp.info/en/)||[WAMP](http://www.wampserver.com) thanks to [the documentation](https://docs.google.com/document/d/1LgxRb76wPP7HfCm4asfJpHhXJ713WnRwPS0EvJi1Ixs/edit?usp=sharing) - ENJOY !
 
