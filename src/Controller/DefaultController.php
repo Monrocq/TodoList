@@ -15,6 +15,8 @@ class DefaultController extends AbstractController
     public function indexAction()
     {
         $response = $this->render('default/index.html.twig'); /* @var $response Response */
+        return $response;
+        /*
         $response->setSharedMaxAge(800);
         $date = new \DateTime();
         $date->modify('+800 seconds');
@@ -26,6 +28,6 @@ class DefaultController extends AbstractController
         $response->headers->set(AbstractSessionListener::NO_AUTO_CACHE_CONTROL_HEADER, 'true');
         $response->headers->addCacheControlDirective('must-revalidate', false);
         return $response;
-
+        */
     }
 }
