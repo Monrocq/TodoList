@@ -18,7 +18,7 @@ Là aussi, les estimations indiqués ont été donnés par rapport à mes capaci
 ## Rapport de qualité
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/722ab397afa64fc98237091437ea26f6)](https://www.codacy.com/manual/Monrocq/TodoList?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Monrocq/TodoList&amp;utm_campaign=Badge_Grade)
 ## Rapport de performance
-Effectué avec [Blackfire](https://blackfire.io/profiles/fce7353f-31a5-412b-9d37-15fa2967dacd/graph)
+Effectué avec [Blackfire](https://blackfire.io/profiles/compare/bc872025-2597-420d-bc0e-474a29e8467a/graph)
 ## Installation
 1. Clone the repository in your local path
 2. Go to your local path with the command prompt after to have [composer](https://getcomposer.org/download/)/[PHP](https://www.php.net/manual/fr/install.php)/[MySQL](https://openclassrooms.com/fr/courses/1959476-administrez-vos-bases-de-donnees-avec-mysql/1959969-installez-mysql)
