@@ -14,7 +14,7 @@ L'estimation correspondant à la réalisation des Issues est disponible sur [mon
 
 Là aussi, les estimations indiqués ont été donnés par rapport à mes capacités et mes connaissances. Ces durées peuvent varier d'un individu à un autre autre.
 ## Etat actuel du projet
-**En cours de validation...**
+**Projet validé**
 ## Rapport de qualité
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/722ab397afa64fc98237091437ea26f6)](https://www.codacy.com/manual/Monrocq/TodoList?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Monrocq/TodoList&amp;utm_campaign=Badge_Grade)
 ## Rapport de performance
